@@ -1,13 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Afacad Flux", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+:root {
+  --background-color: #0F0F0F;
+  --text-color: white;
+  --text-color-light: #b3b3b3;
+
+  --light-neon-blue: #33FFFF;
+  --vibrant-cyan: #00E5FF;
+  --electric-blue: #0D98BA;
+  --dark-neon-blue: #0066CC;
+  --glow-purple-blue: #5A00FF;
+  --matte-black: #1C1C1C;
 }

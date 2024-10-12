@@ -1,0 +1,64 @@
+.description {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    & .description-data {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 7%;
+
+        & p {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        & p:nth-child(2) {
+            font-weight: 600;
+            font-size: 50px;
+            color: var(--light-neon-blue);
+        }
+    }
+
+    & .description-image {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-right: 10%;
+
+        & .image {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+
+            & img {
+                position: absolute;
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+                transition: opacity 0.5s ease-in-out;
+
+                &:hover {
+                    opacity: 0;
+                }
+            }
+
+            & .second-image {
+                opacity: 0;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+
+        }
+    }
+
+}
