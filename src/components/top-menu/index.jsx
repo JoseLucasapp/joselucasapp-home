@@ -4,7 +4,7 @@ const TopMenu = () => {
     return (
         <section className='top-menu'>
             <div className='logo'>
-                <h1>José Lucas</h1>
+                <h1>Joselucasapp</h1>
             </div>
             <nav className='menu'>
                 <ul>

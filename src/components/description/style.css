@@ -1,17 +1,17 @@
 .description {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    padding: 2%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    justify-content: center;
 
     & .description-data {
-        width: 50%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding-left: 7%;
+        padding-left: 5%;
 
         & p {
             margin: 0;
@@ -26,10 +26,8 @@
     }
 
     & .description-image {
-        width: 50%;
+        width: 30%;
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
         padding-right: 10%;
 
         & .image {
