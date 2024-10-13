@@ -10,7 +10,7 @@
         width: 60%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: start;
         padding-left: 5%;
 
         & p {
