@@ -37,3 +37,9 @@
     padding-bottom: 2%;
     width: 100%;
 }
+
+@media (max-width: 1000px) {
+    .skill-fragment {
+        width: 48%;
+    }
+}

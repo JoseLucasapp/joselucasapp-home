@@ -1,9 +1,12 @@
 .top-menu {
+    position: fixed;
     display: flex;
     flex-direction: row;
     width: 90%;
-    height: 5vw;
+    height: 7vw;
     justify-content: center;
+    background-color: var(--background-color);
+    z-index: 100;
 }
 
 .logo {
@@ -12,7 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    color: var(--vibrant-cyan);
+    color: var(--light-neon-blue);
 }
 
 .logo h1 {
@@ -47,10 +50,34 @@
 
 .menu ul li a {
     text-decoration: none;
-    color: var(--vibrant-cyan);
+    color: var(--light-neon-blue);
 }
 
 .menu ul li a:hover {
-    color: var(--light-neon-blue);
     text-decoration: underline;
+}
+
+
+@media (max-width: 815px) {
+    .top-menu {
+        flex-direction: column;
+        height: 20vh;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        position: relative;
+    }
+
+    .logo {
+        width: 90%;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
 }

@@ -1,0 +1,35 @@
+.contact-card {
+    display: flex;
+    width: 22%;
+    height: max-content;
+    margin: 1%;
+    margin-top: 3%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: var(--light-neon-blue);
+    font-size: 27px;
+    font-weight: 500;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    width: max-content;
+    transform: scale(0.9);
+    text-align: center;
+}
+
+.contact-card a:hover {
+    color: var(--vibrant-cyan);
+    transform: scale(1);
+}
+
+@media (max-width: 1000px) {
+    .contact-card {
+        margin: 5%;
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+}

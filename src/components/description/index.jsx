@@ -2,7 +2,7 @@ import './style.css'
 
 const Description = () => {
     return (
-        <section className='description' id='description'>
+        <section className='description'>
             <div className="description-data">
                 <p>Hello, I am</p>
                 <p>José Lucas Gonçalves Freitas</p>

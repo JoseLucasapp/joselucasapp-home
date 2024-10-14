@@ -1,5 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .home {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100vw;
+    overflow-x: hidden
 }

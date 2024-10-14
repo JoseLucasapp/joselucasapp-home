@@ -12,10 +12,10 @@ const TopMenu = () => {
                         <a href='#description'>About me</a>
                     </li>
                     <li>
-                        <a href='#'>Projects</a>
+                        <a href='#skills'>Skills</a>
                     </li>
                     <li>
-                        <a href='https://www.linkedin.com/in/jlgf524150/'>Contact</a>
+                        <a href='#contact'>Contact</a>
                     </li>
                 </ul>
             </nav>
