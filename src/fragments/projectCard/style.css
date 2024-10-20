@@ -1,0 +1,91 @@
+.project-card {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    margin: 1%;
+    margin-top: 2%;
+    margin-left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card a {
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.project-card a img {
+    width: 100px;
+    height: 100px;
+}
+
+.project-card a div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+
+.project-card a div h1 {
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--light-neon-blue);
+    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--light-neon-blue);
+}
+
+.project-card a div p {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    width: 100%;
+}
+
+.project-card a div ul {
+    justify-content: start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.project-card a div ul li {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--light-neon-blue);
+    margin: 0.5%;
+    border: 1px solid var(--light-neon-blue);
+    padding: 0.5%;
+}
+
+.project-card a div ul li:nth-child(1) {
+    margin-left: 0;
+}
+
+.default-logo {
+    filter: invert(100%);
+}
+
+@media (max-width: 1000px) {
+
+    .project-card {
+        width: 95%;
+    }
+
+    .project-card div {
+        margin-left: 0;
+    }
+
+    .project-card img {
+        display: none;
+    }
+}
