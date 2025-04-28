@@ -6,6 +6,7 @@ import './style.css'
 import { Contact } from '../../components/contact'
 import { Footer } from '../../components/footer'
 import { Projects } from '../../components/projects'
+import Zumbra from '../../components/zumbra'
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Description />
             <AboutMe />
             <Skills />
+            <Zumbra />
             <Projects />
             <Contact />
             <Footer />
