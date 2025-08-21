@@ -54,7 +54,7 @@ const Home = () => {
 
 
     return (
-        <section className="home" id='description' style={darkTheme ? { backgroundColor: "#000000", color: "#fff" } : { color: "#000000", backgroundColor: "#fff" }}>
+        <section className={`home ${darkTheme ? "dark" : "light"}`} id='description' style={darkTheme ? { backgroundColor: "#000000", color: "#fff" } : { color: "#000000", backgroundColor: "#fff" }}>
             <section className='top'>
                 <ul>
                     {

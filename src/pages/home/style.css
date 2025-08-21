@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --hover-color: #00f7ff;
+    --hover-text: #ffffff;
+}
+
+.light {
+    --hover-color: #004466;
+    --hover-text: #000000;
+}
+
+.dark {
+    --hover-color: #00f7ff;
+    --hover-text: #ffffff;
+}
+
+
 html,
 body {
     width: 100%;
@@ -71,14 +87,14 @@ body {
 
 .top ul li:hover {
     font-size: 20px;
-    color: #fff;
-    text-shadow: 0 0 8px #00f7ff, 0 0 15px #00f7ff;
+    color: var(--hover-text);
+    text-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
 }
 
 .top ul li:hover::before,
 .top ul li:hover::after {
     opacity: 1;
     transform: translateX(0);
-    color: #00f7ff;
-    text-shadow: 0 0 8px #00f7ff, 0 0 15px #00f7ff;
+    color: var(--hover-color);
+    text-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
 }

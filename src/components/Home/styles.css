@@ -11,7 +11,7 @@
     justify-content: center;
     width: 340px;
     height: 520px;
-    background-color: #fff;
+    background-color: var(--hover-text);
 }
 
 .home-page-photo img {
