@@ -15,5 +15,70 @@ body {
     flex-direction: column;
     align-items: center;
     max-width: 100vw;
-    overflow-x: hidden
+    overflow-x: hidden;
+    max-height: 100vh;
+}
+
+.top {
+    display: flex;
+    width: 100vw;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    width: 100vw;
+    height: 95vh;
+    justify-content: center;
+}
+
+.top ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.top ul li {
+    width: max-content;
+    padding: 0 5px 5px 5px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+.top ul li::before,
+.top ul li::after {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.top ul li::before {
+    content: ">>";
+    margin-right: 5px;
+    transform: translateX(-5px);
+}
+
+.top ul li::after {
+    content: "<<";
+    margin-left: 5px;
+    transform: translateX(5px);
+}
+
+.top ul li:hover {
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 8px #00f7ff, 0 0 15px #00f7ff;
+}
+
+.top ul li:hover::before,
+.top ul li:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+    color: #00f7ff;
+    text-shadow: 0 0 8px #00f7ff, 0 0 15px #00f7ff;
 }

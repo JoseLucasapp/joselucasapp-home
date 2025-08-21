@@ -1,0 +1,21 @@
+.home-page-main {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home-page-photo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 340px;
+    height: 520px;
+    background-color: #fff;
+}
+
+.home-page-photo img {
+    margin-top: 20px;
+    width: 300px;
+    height: 420px;
+}

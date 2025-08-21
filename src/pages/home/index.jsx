@@ -1,25 +1,115 @@
-import { AboutMe } from '../../components/about-me'
-import { Description } from '../../components/description'
-import { TopMenu } from '../../components/top-menu'
-import { Skills } from '../../components/skills'
 import './style.css'
-import { Contact } from '../../components/contact'
-import { Footer } from '../../components/footer'
-import { Projects } from '../../components/projects'
-import Zumbra from '../../components/zumbra'
+import { buttons, menuOptions, phrases } from '../../data/translation'
+import { useState } from 'react'
+import OptionsComponent from '../../components/Options';
+import HomeComponent from '../../components/Home';
 
 const Home = () => {
+    const [ptBr, setPtBr] = useState(false);
+    const [darkTheme, setDarkTheme] = useState(true);
+
+    const [home, setHome] = useState(true);
+    const [projects, setProjects] = useState(false);
+    const [about, setAbout] = useState(false);
+    const [contact, setContact] = useState(false);
+    const [resume, setResume] = useState(false);
+    const [options, setOptions] = useState(false);
+
+    const resetMenu = () => {
+        setHome(false);
+        setProjects(false);
+        setAbout(false);
+        setContact(false);
+        setResume(false);
+        setOptions(false);
+    }
+
+
+    const handleChangePage = (engTitle) => {
+        resetMenu();
+        switch (engTitle) {
+            case "Home":
+                setHome(true);
+                break;
+            case "Projects":
+                setProjects(true);
+                break;
+            case "About me":
+                setAbout(true);
+                break;
+            case "Contact":
+                setContact(true);
+                break;
+            case "Resume":
+                setResume(true);
+                break;
+            case "Options":
+                setOptions(true);
+                break;
+            default:
+                setHome(true);
+                break;
+        }
+    }
+
+
     return (
-        <div className="home" id='description'>
-            <TopMenu />
-            <Description />
-            <AboutMe />
-            <Skills />
-            <Zumbra />
-            <Projects />
-            <Contact />
-            <Footer />
-        </div>
+        <section className="home" id='description' style={darkTheme ? { backgroundColor: "#000000", color: "#fff" } : { color: "#000000", backgroundColor: "#fff" }}>
+            <section className='top'>
+                <ul>
+                    {
+                        menuOptions.map((option, index) => (
+                            <li onClick={() => handleChangePage(option.eng)}>{ptBr ? option.pt : option.eng}</li>
+                        ))
+                    }
+                </ul>
+            </section>
+            <section className='content'>
+                {
+                    home && (
+                        <HomeComponent ptBr={ptBr} />
+                    )
+                }
+
+                {
+                    projects && (
+                        <section>
+                            Projects
+                        </section>
+                    )
+                }
+
+                {
+                    about && (
+                        <section>
+                            About me
+                        </section>
+                    )
+                }
+
+                {
+                    contact && (
+                        <section>
+                            Contact
+                        </section>
+                    )
+                }
+
+                {
+                    resume && (
+                        <section>
+                            Resume
+                        </section>
+                    )
+                }
+
+                {
+                    options && (
+                        <OptionsComponent ptBr={ptBr} setDarkTheme={setDarkTheme} setPtBr={setPtBr} darkTheme={darkTheme} />
+                    )
+                }
+            </section>
+        </section>
     )
 }
 
