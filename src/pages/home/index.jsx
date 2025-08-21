@@ -3,6 +3,7 @@ import { buttons, menuOptions, phrases } from '../../data/translation'
 import { useState } from 'react'
 import OptionsComponent from '../../components/Options';
 import HomeComponent from '../../components/Home';
+import ContactComponent from '../../components/Contact';
 
 const Home = () => {
     const [ptBr, setPtBr] = useState(false);
@@ -89,9 +90,7 @@ const Home = () => {
 
                 {
                     contact && (
-                        <section>
-                            Contact
-                        </section>
+                        <ContactComponent ptBr={ptBr} />
                     )
                 }
 

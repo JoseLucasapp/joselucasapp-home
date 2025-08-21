@@ -98,3 +98,24 @@ body {
     color: var(--hover-color);
     text-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
 }
+
+.cta-button {
+    width: max-content;
+    padding: 5px 10px 5px 10px;
+    color: var(--hover-text);
+    border-radius: 30px;
+    background-color: transparent;
+    border: 1px solid var(--hover-text);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cta-button span {
+    margin-left: 5px;
+}
+
+.cta-button:hover {
+    color: var(--hover-color);
+    border-color: var(--hover-color);
+}

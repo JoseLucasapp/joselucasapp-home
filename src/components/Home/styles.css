@@ -19,3 +19,35 @@
     width: 300px;
     height: 420px;
 }
+
+.home-page-info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.home-page-info h1 {
+    font-size: 32px;
+}
+
+.home-page-info h2 {
+    font-size: 24px;
+    margin-top: 1%;
+}
+
+.home-page-info p {
+    font-size: 18px;
+    margin-top: 1%;
+}
+
+.home-page-info span {
+    font-size: 16px;
+    margin-top: 1%;
+}
+
+.home-page-info .buttons {
+    margin-top: 2%;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}

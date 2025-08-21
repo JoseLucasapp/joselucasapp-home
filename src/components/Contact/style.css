@@ -1,0 +1,75 @@
+.contact-page-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-page-main .contact-details {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+}
+
+.contact-page-main .contact-details .line {
+    width: 2px;
+    background-color: var(--hover-text);
+    height: 120px;
+    margin: 0 10px 0 10px;
+}
+
+.contact-page-main h1 {
+    font-size: 32px;
+}
+
+.contact-page-main ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.contact-page-main ul li {
+    cursor: pointer;
+}
+
+.contact-page-main ul li a {
+    color: var(--hover-text);
+    text-decoration: none;
+    font-size: 22px;
+}
+
+
+.contact-page-main ul li a::before,
+.contact-page-main ul li a::after {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+
+.contact-page-main ul li a::before {
+    content: ">>";
+    margin-right: 5px;
+    transform: translateX(-5px);
+}
+
+.contact-page-main ul li a::after {
+    content: "<<";
+    margin-left: 5px;
+    transform: translateX(5px);
+}
+
+.contact-page-main ul li a:hover {
+    font-size: 22px;
+    color: var(--hover-text);
+    text-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
+}
+
+.contact-page-main ul li a:hover::before,
+.contact-page-main ul li a:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--hover-color);
+    text-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
+}

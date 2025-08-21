@@ -67,7 +67,7 @@ export const phrases = {
     },
     "short_description": {
         "pt": "Atualmente curso Análise e Desenvolvimento de Sistemas na UNIFIP e atuo como desenvolvedor com experiência em APIs robustas, automação, cloud (AWS, Docker) e construção de interfaces intuitivas.Tenho paixão por transformar ideias em produtos reais, explorando desde o backend com Node.js e Go até o frontend com React.",
-        "eng": "I’m currently studying Systems Analysis and Development at UNIFIP and working as a developer with experience in robust APIs, automation, cloud (AWS, Docker), and creating intuitive interfaces.I love turning ideas into real products, working across the stack — from backend with Node.js and Go to frontend with React."
+        "eng": "I'm currently studying Systems Analysis and Development at UNIFIP and working as a developer with experience in robust APIs, automation, cloud (AWS, Docker), and creating intuitive interfaces.I love turning ideas into real products, working across the stack, from backend with Node.js and Go to frontend with React."
     },
     "call_to_action": {
         "pt": "💡 Explore meus projetos, conheça minhas habilidades ou entre em contato para colaborarmos em algo incrível.",
