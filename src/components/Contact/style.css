@@ -12,13 +12,6 @@
     align-items: center;
 }
 
-.contact-page-main .contact-details .line {
-    width: 2px;
-    background-color: var(--hover-text);
-    height: 120px;
-    margin: 0 10px 0 10px;
-}
-
 .contact-page-main h1 {
     font-size: 32px;
 }
@@ -27,6 +20,8 @@
     display: flex;
     flex-direction: column;
     list-style: none;
+    border-left: 2px solid white;
+    margin-left: 25px;
 }
 
 .contact-page-main ul li {

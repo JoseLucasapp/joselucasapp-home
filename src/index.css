@@ -13,10 +13,6 @@ code {
     monospace;
 }
 
-::-webkit-scrollbar {
-  width: 0;
-}
-
 :root {
   --background-color: #0F0F0F;
   --text-color: white;
@@ -28,4 +24,23 @@ code {
   --dark-neon-blue: #0066CC;
   --glow-purple-blue: #5A00FF;
   --matte-black: #1C1C1C;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hover-text);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hover-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

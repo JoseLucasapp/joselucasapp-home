@@ -4,6 +4,7 @@ import { useState } from 'react'
 import OptionsComponent from '../../components/Options';
 import HomeComponent from '../../components/Home';
 import ContactComponent from '../../components/Contact';
+import ResumeComponent from '../../components/Resume';
 
 const Home = () => {
     const [ptBr, setPtBr] = useState(false);
@@ -96,9 +97,7 @@ const Home = () => {
 
                 {
                     resume && (
-                        <section>
-                            Resume
-                        </section>
+                        <ResumeComponent ptBr={ptBr} />
                     )
                 }
 

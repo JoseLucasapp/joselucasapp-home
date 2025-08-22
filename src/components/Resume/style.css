@@ -1,0 +1,81 @@
+.resume-main {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume-download {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    justify-content: space-evenly;
+}
+
+.resume-download a {
+    text-decoration: none;
+    color: var(--hover-text);
+    background-color: transparent;
+    border: 1px solid var(--hover-text);
+    height: max-content;
+    width: max-content;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 2%;
+}
+
+.resume-download a:hover {
+    color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+.resume-details {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-right: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-left: 3px solid white;
+    padding-left: 1%;
+}
+
+.resume-details h1 {
+    font-size: 26px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.resume-details h1:hover {
+    color: var(--hover-color);
+}
+
+.resume-details ul {
+    list-style: none;
+    color: white;
+    margin-left: 20px;
+}
+
+.resume-details ul li {
+    margin: 10px 0 10px 0;
+    border-bottom: 1px solid var(--hover-text);
+    padding: 5px 0 5px 0;
+}
+
+.resume-details ul.experience li p:last-of-type {
+    margin-left: 10px;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skills h3 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
