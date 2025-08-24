@@ -169,4 +169,35 @@ export const resume = {
     ]
 }
 
-export const projects = []
+export const projects = [
+    {
+        "title": "Zumbra",
+        "description": {
+            "eng": "Zumbra is a custom programming language built with its own parser, compiler, and virtual machine. It supports function definitions, scoped variables, custom operators, and more, all with a minimalist syntax and a playful soul.",
+            "pt": "Zumbra é uma linguagem de programação personalizada construída com seu próprio parser, compilador e máquina virtual. Ela oferece suporte a definições de funções, variáveis com escopo, operadores personalizados e muito mais, tudo isso com uma sintaxe minimalista e uma alma divertida."
+        },
+        "thumb": "zumbra.png",
+        "link": "https://github.com/JoseLucasapp/Zumbra-lang",
+        "stack": ["Go"],
+    },
+    {
+        "title": "Universal terminal file viewer",
+        "description": {
+            "eng": "Universal terminal file viewer is a lightweight CLI tool written in Rust to display images, PDFs, and plain text files directly in your terminal, without needing any GUI tools.",
+            "pt": "Universal Terminal File Viewer é uma ferramenta de linha de comando (CLI) leve, escrita em Rust, para exibir imagens, PDFs e arquivos de texto simples diretamente no terminal, sem a necessidade de ferramentas gráficas (GUI)."
+        },
+        "thumb": "default.png",
+        "link": "https://github.com/JoseLucasapp/Universal-terminal-file-viewer",
+        "stack": ["Rust"],
+    },
+    {
+        "title": "Worden Ring",
+        "description": {
+            "eng": "Worden Ring is a word game inspired by the classic Wordle, but set in the dark and challenging universe of Elden Ring.",
+            "pt": "Worden Ring é um jogo de palavras inspirado no clássico Wordle, mas ambientado no universo sombrio e desafiador de Elden Ring."
+        },
+        "thumb": "worden.png",
+        "link": "https://worden-ring.vercel.app/",
+        "stack": ["Vite", "React", "Javascript", "Typescript"],
+    },
+]

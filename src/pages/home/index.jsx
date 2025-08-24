@@ -5,6 +5,7 @@ import OptionsComponent from '../../components/Options';
 import HomeComponent from '../../components/Home';
 import ContactComponent from '../../components/Contact';
 import ResumeComponent from '../../components/Resume';
+import ProjectsComponent from '../../components/Projects';
 
 const Home = () => {
     const [ptBr, setPtBr] = useState(false);
@@ -75,9 +76,7 @@ const Home = () => {
 
                 {
                     projects && (
-                        <section>
-                            Projects
-                        </section>
+                        <ProjectsComponent ptBr={ptBr} darkTheme={darkTheme} />
                     )
                 }
 

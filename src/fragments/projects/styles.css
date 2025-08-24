@@ -1,0 +1,58 @@
+.projects-fragment-main {
+    display: flex;
+    width: 300px;
+    height: auto;
+    min-height: 400px;
+
+}
+
+.projects-fragment-main a {
+    text-decoration: none;
+    color: var(--hover-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    width: 100%;
+    padding: 20px;
+    min-height: 400px;
+    height: auto;
+    border: 1px solid var(--hover-text);
+}
+
+.projects-fragment-main a:hover {
+    border-color: var(--hover-color);
+    color: var(--hover-color);
+    text-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
+    box-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
+
+}
+
+.projects-fragment-main a h1 {
+    font-size: 22px;
+}
+
+.projects-fragment-main a img {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+}
+
+.projects-fragment-main a ul.projects-fragment-list {
+    list-style: none;
+    display: flex;
+}
+
+.projects-fragment-main a p {
+    font-size: 14px;
+}
+
+.projects-fragment-main a ul.projects-fragment-list li {
+    font-size: 16px;
+    margin-left: 5px;
+    flex-wrap: wrap;
+}
+
+.projects-fragment-main a ul.projects-fragment-list li:first-of-type {
+    margin-left: unset;
+}
