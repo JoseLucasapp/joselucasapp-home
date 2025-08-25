@@ -181,6 +181,26 @@ export const projects = [
         "stack": ["Go"],
     },
     {
+        "title": "Zumbra website",
+        "description": {
+            "eng": "Zumbra is a custom programming language built with its own parser, compiler, and virtual machine. It supports function definitions, scoped variables, custom operators, and more, all with a minimalist syntax and a playful soul.",
+            "pt": "Zumbra é uma linguagem de programação personalizada construída com seu próprio parser, compilador e máquina virtual. Ela oferece suporte a definições de funções, variáveis com escopo, operadores personalizados e muito mais, tudo isso com uma sintaxe minimalista e uma alma divertida."
+        },
+        "thumb": "zumbra-web.png",
+        "link": "https://github.com/JoseLucasapp/Zumbra-lang",
+        "stack": ["Vite", "React", "Typescript"],
+    },
+    {
+        "title": "Fullstack dictionary",
+        "description": {
+            "eng": "A personal dictionary where users can search words, mark them as favorites and view history.",
+            "pt": "Um dicionário pessoal, onde o usuário pode criar sua conta e salvar e visualizar palavras."
+        },
+        "thumb": "dictionary.png",
+        "link": "https://github.com/JoseLucasapp/fullstack-dictionary",
+        "stack": ["Vite", "React", "Typescript", "NodeJS", "MongoDB"],
+    },
+    {
         "title": "Universal terminal file viewer",
         "description": {
             "eng": "Universal terminal file viewer is a lightweight CLI tool written in Rust to display images, PDFs, and plain text files directly in your terminal, without needing any GUI tools.",

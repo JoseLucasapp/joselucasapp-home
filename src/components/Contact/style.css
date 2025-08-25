@@ -68,3 +68,14 @@
     color: var(--hover-color);
     text-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
 }
+
+@media screen and (max-width: 924px) {
+
+    .contact-page-main {
+        align-items: unset;
+    }
+
+    .contact-details {
+        flex-direction: column;
+    }
+}

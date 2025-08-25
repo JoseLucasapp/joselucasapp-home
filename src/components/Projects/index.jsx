@@ -10,6 +10,8 @@ const ProjectsComponent = ({ ptBr, darkTheme }) => {
                     <ProjectsFragment ptBr={ptBr} data={project} darkTheme={darkTheme} />
                 ))}
             </ul>
+
+            <a className="link-github" href="https://github.com/JoseLucasapp?tab=repositories">See all my projects here</a>
         </section>
     )
 }

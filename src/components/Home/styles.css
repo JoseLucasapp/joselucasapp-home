@@ -51,3 +51,35 @@
     width: 100%;
     justify-content: space-evenly;
 }
+
+@media screen and (max-width: 924px) {
+    .home-page-main {
+        flex-direction: column;
+    }
+
+    .home-page-photo {
+        width: 250px;
+        height: 400px;
+        padding: 20px 0 50px 0px;
+    }
+
+    .home-page-photo img {
+        width: 200px;
+        height: 290px;
+        margin: 0;
+    }
+
+    .home-page-info {
+        width: 80%;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+
+    .home-page-info h1 {
+        margin-top: 10px;
+    }
+
+    .home-page-info h2 {
+        margin-top: 10px;
+    }
+}

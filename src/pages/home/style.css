@@ -119,3 +119,95 @@ body {
     color: var(--hover-color);
     border-color: var(--hover-color);
 }
+
+.mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 998;
+}
+
+.mobile-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-toggle {
+    background-color: transparent;
+    border: 1px solid var(--hover-text);
+    color: var(--hover-text);
+    border-radius: 15px;
+    padding: 5px;
+    position: absolute;
+    left: 5px;
+}
+
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(80vw, 320px);
+    background: inherit;
+    color: inherit;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-drawer.open {
+    transform: translateX(0);
+}
+
+
+.mobile-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.mobile-drawer-close {
+    background: transparent;
+    border: 1px solid var(--hover-text);
+    padding: 6px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    color: var(--hover-text);
+}
+
+.mobile-drawer-close:hover {
+    border-color: var(--hover-color);
+    color: var(--hover-color);
+}
+
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 8px 10px;
+}
+
+.mobile-menu-list li {
+    padding: 12px 10px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+.mobile-menu-list li:hover {
+    color: var(--hover-color);
+}
+
+@media screen and (max-width: 924px) {
+    .top ul {
+        display: none;
+    }
+}

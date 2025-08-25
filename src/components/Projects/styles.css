@@ -2,14 +2,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
 }
 
 .projects-page-main ul.projects-main-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 16px;
     width: 90%;
     list-style: none;
+}
+
+.projects-page-main a.link-github {
+    text-decoration: none;
+    color: var(--hover-text);
+    border: 1px solid var(--hover-text);
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 924px) {
+
+    .projects-page-main ul.projects-main-list {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
 }

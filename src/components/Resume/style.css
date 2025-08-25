@@ -79,3 +79,28 @@
     margin-left: 5px;
     margin-right: 5px;
 }
+
+@media screen and (max-width: 924px) {
+
+    .resume-main {
+        flex-direction: column;
+    }
+
+    .resume-download {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        order: 2;
+        margin-top: 5px;
+    }
+
+    .resume-download a {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .resume-details {
+        width: 90%;
+        order: 1;
+    }
+}
