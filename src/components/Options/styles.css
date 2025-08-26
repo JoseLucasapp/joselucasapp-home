@@ -1,0 +1,64 @@
+.options-page-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.options-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.options-selection p {
+    font-size: 24px;
+}
+
+.options-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options-options p {
+    font-size: 18px;
+    padding: 5%;
+    cursor: pointer;
+}
+
+.options-options p::before,
+.options-options p::after {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+
+.options-options p::before {
+    content: ">>";
+    margin-right: 5px;
+    transform: translateX(-5px);
+}
+
+.options-options p::after {
+    content: "<<";
+    margin-left: 5px;
+    transform: translateX(5px);
+}
+
+.options-options p:hover {
+    font-size: 20px;
+    color: var(--hover-text);
+    text-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
+}
+
+.options-options p:hover::before,
+.options-options p:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--hover-color);
+    text-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
+}

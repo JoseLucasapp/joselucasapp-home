@@ -5,18 +5,12 @@ body {
   font-family: "Afacad Flux", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-color);
-  color: var(--text-color);
   scroll-behavior: smooth;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-::-webkit-scrollbar {
-  width: 0;
 }
 
 :root {
@@ -30,4 +24,23 @@ code {
   --dark-neon-blue: #0066CC;
   --glow-purple-blue: #5A00FF;
   --matte-black: #1C1C1C;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hover-text);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hover-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
