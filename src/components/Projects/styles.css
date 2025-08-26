@@ -38,5 +38,6 @@
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
         overflow-x: hidden;
+        scrollbar-width: none;
     }
 }
