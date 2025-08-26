@@ -11,7 +11,7 @@ const ProjectsComponent = ({ ptBr, darkTheme }) => {
                 ))}
             </ul>
 
-            <a className="link-github" href="https://github.com/JoseLucasapp?tab=repositories">See all my projects here</a>
+            <a className="link-github" target="blank" href="https://github.com/JoseLucasapp?tab=repositories">See all my projects here</a>
         </section>
     )
 }

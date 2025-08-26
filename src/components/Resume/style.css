@@ -28,6 +28,7 @@
 .resume-download a:hover {
     color: var(--hover-color);
     border-color: var(--hover-color);
+    box-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
 }
 
 .resume-details {
@@ -39,24 +40,28 @@
     overflow-x: hidden;
     max-height: 80vh;
     overflow-y: auto;
-    border-left: 3px solid white;
+    border-left: 3px solid var(--hover-text);
     padding-left: 1%;
+
 }
 
 .resume-details h1 {
     font-size: 26px;
     text-decoration: underline;
     cursor: pointer;
+    color: var(--hover-text);
 }
 
 .resume-details h1:hover {
     color: var(--hover-color);
+
 }
 
 .resume-details ul {
     list-style: none;
     color: white;
     margin-left: 20px;
+    color: var(--hover-text);
 }
 
 .resume-details ul li {

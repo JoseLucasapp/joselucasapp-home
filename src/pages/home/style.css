@@ -206,8 +206,16 @@ body {
     color: var(--hover-color);
 }
 
+.menu-toggle {
+    display: none;
+}
+
 @media screen and (max-width: 924px) {
     .top ul {
         display: none;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 }

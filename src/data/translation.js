@@ -8,16 +8,11 @@ export const menuOptions = [
         eng: "Projects",
     },
     {
-        pt: "Sobre mim",
-        eng: "About me",
-    },
-    {
-        pt: "Contato",
-        eng: "Contact",
-    },
-    {
         pt: "Currículo",
         eng: "Resume",
+    }, {
+        pt: "Contato",
+        eng: "Contact",
     },
     {
         pt: "Opções",
@@ -173,8 +168,8 @@ export const projects = [
     {
         "title": "Zumbra",
         "description": {
-            "eng": "Zumbra is a custom programming language built with its own parser, compiler, and virtual machine. It supports function definitions, scoped variables, custom operators, and more, all with a minimalist syntax and a playful soul.",
-            "pt": "Zumbra é uma linguagem de programação personalizada construída com seu próprio parser, compilador e máquina virtual. Ela oferece suporte a definições de funções, variáveis com escopo, operadores personalizados e muito mais, tudo isso com uma sintaxe minimalista e uma alma divertida."
+            "eng": "Zumbra is a custom programming language built with its own parser, compiler, and virtual machine.",
+            "pt": "Zumbra é uma linguagem de programação personalizada construída com seu próprio parser, compilador e máquina virtual."
         },
         "thumb": "zumbra.png",
         "link": "https://github.com/JoseLucasapp/Zumbra-lang",
@@ -183,8 +178,8 @@ export const projects = [
     {
         "title": "Zumbra website",
         "description": {
-            "eng": "Zumbra is a custom programming language built with its own parser, compiler, and virtual machine. It supports function definitions, scoped variables, custom operators, and more, all with a minimalist syntax and a playful soul.",
-            "pt": "Zumbra é uma linguagem de programação personalizada construída com seu próprio parser, compilador e máquina virtual. Ela oferece suporte a definições de funções, variáveis com escopo, operadores personalizados e muito mais, tudo isso com uma sintaxe minimalista e uma alma divertida."
+            "eng": "Zumbra is a custom programming language built with its own parser, compiler, and virtual machine.",
+            "pt": "Zumbra é uma linguagem de programação personalizada construída com seu próprio parser, compilador e máquina virtual."
         },
         "thumb": "zumbra-web.png",
         "link": "https://github.com/JoseLucasapp/Zumbra-lang",
@@ -203,8 +198,8 @@ export const projects = [
     {
         "title": "Universal terminal file viewer",
         "description": {
-            "eng": "Universal terminal file viewer is a lightweight CLI tool written in Rust to display images, PDFs, and plain text files directly in your terminal, without needing any GUI tools.",
-            "pt": "Universal Terminal File Viewer é uma ferramenta de linha de comando (CLI) leve, escrita em Rust, para exibir imagens, PDFs e arquivos de texto simples diretamente no terminal, sem a necessidade de ferramentas gráficas (GUI)."
+            "eng": "Universal terminal file viewer is a CLI tool to display files directly in your terminal.",
+            "pt": "Universal Terminal File Viewer é uma ferramenta de linha de comando (CLI), para exibir diversos arquivos diretamente no terminal."
         },
         "thumb": "default.png",
         "link": "https://github.com/JoseLucasapp/Universal-terminal-file-viewer",

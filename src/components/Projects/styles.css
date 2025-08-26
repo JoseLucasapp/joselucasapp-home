@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    justify-content: center;
 }
 
 .projects-page-main ul.projects-main-list {
@@ -11,6 +12,8 @@
     gap: 16px;
     width: 90%;
     list-style: none;
+    overflow-x: auto;
+    padding-bottom: 20px;
 }
 
 .projects-page-main a.link-github {
@@ -22,10 +25,17 @@
     margin-top: 40px;
 }
 
+.projects-page-main a.link-github:hover {
+    border-color: var(--hover-color);
+    color: var(--hover-color);
+    box-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
+}
+
 @media screen and (max-width: 924px) {
 
     .projects-page-main ul.projects-main-list {
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
+        overflow-x: hidden;
     }
 }

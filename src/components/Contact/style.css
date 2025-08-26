@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    border-left: 2px solid white;
+    border-left: 2px solid var(--hover-text);
     margin-left: 25px;
 }
 

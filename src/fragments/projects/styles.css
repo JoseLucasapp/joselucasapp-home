@@ -24,7 +24,6 @@
 .projects-fragment-main a:hover {
     border-color: var(--hover-color);
     color: var(--hover-color);
-    text-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
     box-shadow: 0 0 8px var(--hover-color), 0 0 15px var(--hover-color);
 
 }
