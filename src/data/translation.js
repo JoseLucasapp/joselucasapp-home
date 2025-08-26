@@ -49,6 +49,10 @@ export const buttons = {
         "pt": "Escuro",
         "eng": "Dark"
     },
+    "see_my_projects": {
+        "pt": "Veja todos os meu projetos",
+        "eng": "See all my projects here"
+    }
 }
 
 export const phrases = {

@@ -1,4 +1,4 @@
-import { projects } from "../../data/translation";
+import { buttons, projects } from "../../data/translation";
 import ProjectsFragment from "../../fragments/projects";
 import "./styles.css";
 
@@ -11,7 +11,7 @@ const ProjectsComponent = ({ ptBr, darkTheme }) => {
                 ))}
             </ul>
 
-            <a className="link-github" target="blank" href="https://github.com/JoseLucasapp?tab=repositories">See all my projects here</a>
+            <a className="link-github" target="blank" href="https://github.com/JoseLucasapp?tab=repositories">{ptBr ? buttons.see_my_projects.pt : buttons.see_my_projects.eng}</a>
         </section>
     )
 }
