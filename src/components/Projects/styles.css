@@ -22,7 +22,8 @@
     border: 1px solid var(--hover-text);
     padding: 10px;
     border-radius: 30px;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .projects-page-main a.link-github:hover {
