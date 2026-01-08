@@ -7,13 +7,13 @@ import { useLang } from "../hooks/useLang";
 const heroCopy = {
   en: {
     tagline:
-      "Senior Software Engineer building scalable systems and solving complex problems for startups and established companies.",
+      "Senior Software Engineer building scalable systems and solving complex problems for startups and established companies. Turning ideas into real software",
     cta1: "Work with me",
     cta2: "View experience",
   },
   "pt-BR": {
     tagline:
-      "Engenheiro de Software Sênior criando sistemas escaláveis e resolvendo problemas complexos para startups e empresas consolidadas.",
+      "Engenheiro de Software, criando sistemas escaláveis e resolvendo problemas complexos para startups e empresas consolidadas. Transformando ideias em aplicações reais",
     cta1: "Trabalhe comigo",
     cta2: "Ver experiência",
   },

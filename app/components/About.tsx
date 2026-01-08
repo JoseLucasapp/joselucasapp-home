@@ -17,7 +17,7 @@ adaptability, the traits that allow me to move fast, learn faster, and consisten
   },
   "pt-BR": {
     title: "Sobre",
-    body: `Sou um Senior Full-Stack Engineer com foco em construir sistemas escaláveis, arquiteturas limpas e experiências de usuário
+    body: `Sou Engenheiro de Software com foco em construir sistemas escaláveis, arquiteturas limpas e experiências de usuário
 intuitivas. Ao longo dos anos, atuei em projetos que conectam tecnologia e negócio, de marketplaces B2B a plataformas
 educacionais e integrações enterprise, sempre buscando entregar soluções sólidas tecnicamente e relevantes de forma
 estratégica. Hoje tenho foco em backends de alta performance usando Go, Node.js/NestJS e TypeScript, além de frameworks
