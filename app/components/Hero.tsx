@@ -7,13 +7,13 @@ import { useLang } from "../hooks/useLang";
 const heroCopy = {
   en: {
     tagline:
-      "Senior Software Engineer building scalable systems and solving complex problems for startups and established companies. Turning ideas into real software",
+      "Senior Software Engineer building scalable systems and solving complex problems for startups and established companies.",
     cta1: "Work with me",
     cta2: "View experience",
   },
   "pt-BR": {
     tagline:
-      "Engenheiro de Software, criando sistemas escaláveis e resolvendo problemas complexos para startups e empresas consolidadas. Transformando ideias em aplicações reais",
+      "Engenheiro de Software, criando sistemas escaláveis e resolvendo problemas complexos para startups e empresas consolidadas. Transformando ideias em aplicações reais.",
     cta1: "Trabalhe comigo",
     cta2: "Ver experiência",
   },
@@ -31,10 +31,6 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-block mb-4 px-4 py-1.5 bg-muted rounded-full">
-            <span className="text-muted-foreground ui-text">@joselucasapp</span>
-          </div>
-
           <h1 className="mb-6 text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.1] tracking-tight">
             Lucas Freitas
           </h1>
