@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 type Lang = "pt-BR" | "en";
 
 export function useLang() {
-  const [lang, setLang] = useState<Lang>("pt-BR");
+  const [lang, setLang] = useState<Lang>("en");
 
   useEffect(() => {
-    const saved = (localStorage.getItem("lang") as Lang | null) ?? "pt-BR";
+    const saved = (localStorage.getItem("lang") as Lang | null) ?? "en";
     setLang(saved);
 
     const handler = (e: Event) => {
