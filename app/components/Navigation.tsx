@@ -2,27 +2,39 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageToggle } from "./LanguageToggle";
+import { useLang } from "../hooks/useLang";
 
-const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#recommendations", label: "Recommendations" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
-];
+const navLinksByLang = {
+  en: [
+    { href: "#about", label: "About" },
+    { href: "#experience", label: "Experience" },
+    { href: "#projects", label: "Projects" },
+    { href: "#recommendations", label: "Recommendations" },
+    { href: "#skills", label: "Skills" },
+    { href: "#contact", label: "Contact" },
+  ],
+  "pt-BR": [
+    { href: "#about", label: "Sobre" },
+    { href: "#experience", label: "Experiência" },
+    { href: "#projects", label: "Projetos" },
+    { href: "#recommendations", label: "Recomendações" },
+    { href: "#skills", label: "Habilidades" },
+    { href: "#contact", label: "Contato" },
+  ],
+} as const;
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const lang = useLang();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinks = navLinksByLang[lang];
 
   return (
     <motion.nav
@@ -42,6 +54,7 @@ export function Navigation() {
           >
             Lucas Freitas
           </a>
+
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -52,9 +65,14 @@ export function Navigation() {
                 {link.label}
               </a>
             ))}
-            <ThemeToggle />
+            <div className="flex items-center gap-2">
+              <LanguageToggle />
+              <ThemeToggle />
+            </div>
           </div>
-          <div className="md:hidden">
+
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageToggle />
             <ThemeToggle />
           </div>
         </div>

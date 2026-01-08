@@ -54,7 +54,6 @@ export function Calendar({
       }}
       components={{
         Chevron: ({ className, ...p }) => {
-          // v9 usa um único Chevron; o DayPicker decide direção via "orientation"
           const orientation =
             (p as any).orientation === "left" ? "left" : "right";
           return orientation === "left" ? (

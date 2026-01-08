@@ -4,29 +4,56 @@ import { motion } from "framer-motion";
 import { Mail, Linkedin, Github } from "lucide-react";
 import { Container } from "./Container";
 import { Section } from "./Section";
+import { useLang } from "../hooks/useLang";
 
-const contactLinks = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "jlgf.profissional@gmail.com",
-    href: "mailto:jlgf.profissional@gmail.com",
+const copy = {
+  en: {
+    title: "Let's work together",
+    subtitle:
+      "If you're looking for a senior engineer who can deliver results, let's connect.",
+    labels: {
+      email: "Email",
+      linkedin: "LinkedIn",
+      github: "GitHub",
+    },
   },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    value: "/in/jlgf524150",
-    href: "https://www.linkedin.com/in/jlgf524150",
+  "pt-BR": {
+    title: "Vamos trabalhar juntos",
+    subtitle:
+      "Se você busca um engenheiro sênior que entrega resultado, vamos conversar.",
+    labels: {
+      email: "Email",
+      linkedin: "LinkedIn",
+      github: "GitHub",
+    },
   },
-  {
-    icon: Github,
-    label: "GitHub",
-    value: "@joselucasapp",
-    href: "https://github.com/joselucasapp",
-  },
-];
+} as const;
 
 export function Contact() {
+  const lang = useLang();
+  const t = copy[lang];
+
+  const contactLinks = [
+    {
+      icon: Mail,
+      label: t.labels.email,
+      value: "jlgf.profissional@gmail.com",
+      href: "mailto:jlgf.profissional@gmail.com",
+    },
+    {
+      icon: Linkedin,
+      label: t.labels.linkedin,
+      value: "/in/jlgf524150",
+      href: "https://www.linkedin.com/in/jlgf524150",
+    },
+    {
+      icon: Github,
+      label: t.labels.github,
+      value: "@joselucasapp",
+      href: "https://github.com/joselucasapp",
+    },
+  ];
+
   return (
     <Section id="contact" muted>
       <Container>
@@ -39,12 +66,12 @@ export function Contact() {
             className="text-center"
           >
             <h2 className="mb-6 text-[clamp(1.875rem,4vw,3rem)] tracking-tight">
-              Let's work together
+              {t.title}
             </h2>
             <p className="mb-12 text-muted-foreground text-lg max-w-xl mx-auto">
-              If you're looking for a senior engineer who can deliver results,
-              let's connect.
+              {t.subtitle}
             </p>
+
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {contactLinks.map((link, index) => (
                 <motion.a
