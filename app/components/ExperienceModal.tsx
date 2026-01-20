@@ -80,7 +80,7 @@ export function ExperienceModal({
                   <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
                     <img
                       src={experience.logo}
-                      alt={`${experience.company} logo`}
+                      alt={` `}
                       className="w-8 h-8 object-contain"
                     />
                   </div>

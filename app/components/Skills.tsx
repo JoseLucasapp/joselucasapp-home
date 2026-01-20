@@ -33,6 +33,7 @@ const skillCategories: SkillCategory[] = [
       "Flask",
       "Gin",
       "Phoenix",
+      "Supabase",
     ],
   },
   {
@@ -53,7 +54,22 @@ const skillCategories: SkillCategory[] = [
   {
     key: "tools",
     category: { en: "Tools & Practices", "pt-BR": "Ferramentas & Práticas" },
-    skills: ["Git", "REST APIs", "GraphQL", "Microservices", "CI/CD", "AI"],
+    skills: [
+      "Git",
+      "REST APIs",
+      "GraphQL",
+      "Microservices",
+      "CI/CD",
+      "AI",
+      "Clerk",
+      "Auth0",
+      "Wordpress",
+    ],
+  },
+  {
+    key: "AI",
+    category: { en: "AI Tools", "pt-BR": "Ferramentas de IA" },
+    skills: ["ChatGPT", "Lovable", "HeroUI", "Claude", "Cursor"],
   },
 ];
 

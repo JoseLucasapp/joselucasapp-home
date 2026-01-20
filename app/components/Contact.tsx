@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, LetterText } from "lucide-react";
 import { Container } from "./Container";
 import { Section } from "./Section";
 import { useLang } from "../hooks/useLang";
@@ -15,6 +15,7 @@ const copy = {
       email: "Email",
       linkedin: "LinkedIn",
       github: "GitHub",
+      resume: "Resume",
     },
   },
   "pt-BR": {
@@ -25,6 +26,7 @@ const copy = {
       email: "Email",
       linkedin: "LinkedIn",
       github: "GitHub",
+      resume: "Curriculo",
     },
   },
 } as const;
@@ -51,6 +53,12 @@ export function Contact() {
       label: t.labels.github,
       value: "@joselucasapp",
       href: "https://github.com/joselucasapp",
+    },
+    {
+      icon: LetterText,
+      label: t.labels.resume,
+      value: "",
+      href: "/resume/eng.pdf",
     },
   ];
 

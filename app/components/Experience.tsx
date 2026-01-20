@@ -8,7 +8,7 @@ import { useLang } from "../hooks/useLang";
 export const experiences = [
   {
     company: "Bolt Group",
-    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEwXFkJSkwlPA/company-logo_100_100/company-logo_100_100/0/1684187252679/bolt_group_logo?e=1768435200&v=beta&t=CyJNzPzTs2huL6Sj0J8vgjyj_6a_cgcoMI5qPjurfXA",
+    logo: "/bolt.jpeg",
     role: {
       en: "Senior Software Engineer",
       "pt-BR": "Engenheiro de Software Sênior",
@@ -116,7 +116,7 @@ export const experiences = [
 
   {
     company: "WEBJUMP",
-    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGIMl1NzhfGzA/company-logo_100_100/B4DZWKhIOpGkAU-/0/1741785695556/webjump_logo?e=1768435200&v=beta&t=oFEEVI3wEQfOcdRBxbkpPGpWHquaXZS-eBbCSM7hQfo",
+    logo: "/webjump.jpeg",
     role: {
       en: "Fullstack Developer (Magento / AEM)",
       "pt-BR": "Desenvolvedor Fullstack (Magento / AEM)",
@@ -176,7 +176,7 @@ export const experiences = [
 
   {
     company: "WEBJUMP",
-    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGIMl1NzhfGzA/company-logo_100_100/B4DZWKhIOpGkAU-/0/1741785695556/webjump_logo?e=1768435200&v=beta&t=oFEEVI3wEQfOcdRBxbkpPGpWHquaXZS-eBbCSM7hQfo",
+    logo: "/webjump.jpeg",
     role: {
       en: "Backend Developer",
       "pt-BR": "Desenvolvedor Backend",
@@ -229,7 +229,7 @@ export const experiences = [
 
   {
     company: "Devnology",
-    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQEnQpA6DV37XA/company-logo_100_100/company-logo_100_100/0/1715009789756/devnology_br_logo?e=1768435200&v=beta&t=uPu_5uYyf0RwEaFmZiXzEG7HNBwsUz347t1TR9_0Y9g",
+    logo: "/devnology.jpeg",
     role: {
       en: "Crawler and Backend Developer",
       "pt-BR": "Desenvolvedor Backend e Crawlers",
@@ -276,7 +276,7 @@ export const experiences = [
 
   {
     company: "Código_Font",
-    logo: "https://media.licdn.com/dms/image/v2/C4E0BAQH54gJXVTxJOA/company-logo_200_200/company-logo_200_200/0/1630630318660?e=1768435200&v=beta&t=4C78XEhDZGw947TpVjB8v6ycxCkk8zEF1nDb20szF3c",
+    logo: "/codigo.jpeg",
     role: {
       en: "Backend Developer",
       "pt-BR": "Desenvolvedor Backend",
