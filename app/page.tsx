@@ -7,6 +7,7 @@ import { Recommendations } from "./components/Recommendations";
 import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { PersonalProjects } from "./components/PersonalProjects";
 
 export default function App() {
   return (
@@ -17,8 +18,10 @@ export default function App() {
         <About />
         <Experience />
         <Projects />
-        <Recommendations />
+        <PersonalProjects />
         <Skills />
+        <Recommendations />
+        
         <Contact />
       </main>
       <Footer />
