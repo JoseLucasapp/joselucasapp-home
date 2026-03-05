@@ -1,3 +1,10 @@
+/* =========================================================
+   Experience.tsx (COMPLETO)
+   - Mantém TODAS as suas experiências (Bolt, Freelance, Webjump x2, Devnology, Código_Font)
+   - Adiciona highlights em TODAS (para não quebrar o modal)
+   - Tipagem explícita (sem “as const” quebrando com strings)
+   ========================================================= */
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -5,7 +12,21 @@ import { useState } from "react";
 import { ExperienceModal } from "./ExperienceModal";
 import { useLang } from "../hooks/useLang";
 
-export const experiences = [
+type Lang = "pt-BR" | "en";
+type I18n<T> = Record<Lang, T>;
+
+export type ExperienceItem = {
+  company: string;
+  logo: string;
+  role: I18n<string>;
+  period: I18n<string>;
+  highlights: I18n<string[]>;
+  responsibilities: I18n<string[]>;
+  projects: I18n<string[]>;
+  technologies: string[];
+};
+
+export const experiences: ExperienceItem[] = [
   {
     company: "Bolt Group",
     logo: "/bolt.jpeg",
@@ -16,6 +37,18 @@ export const experiences = [
     period: {
       en: "Sep 2025 - Present · Remote (Las Vegas, NV, USA)",
       "pt-BR": "Set 2025 - Atual · Remoto (Las Vegas, NV, EUA)",
+    },
+    highlights: {
+      en: [
+        "Owned backend architecture and API design for scalable product domains",
+        "Improved reliability and delivery speed through instrumentation, automation and DX tooling",
+        "Built integrations and data flows across services with strong focus on maintainability",
+      ],
+      "pt-BR": [
+        "Assumi arquitetura de backend e design de APIs para domínios escaláveis do produto",
+        "Melhorei confiabilidade e velocidade de entrega com instrumentação, automação e DX tooling",
+        "Construí integrações e fluxos de dados entre serviços com foco em manutenibilidade",
+      ],
     },
     responsibilities: {
       en: [
@@ -71,6 +104,18 @@ export const experiences = [
       en: "Dec 2020 - Present · Remote",
       "pt-BR": "Dez 2020 - Atual · Remoto",
     },
+    highlights: {
+      en: [
+        "Delivered end-to-end solutions: requirements → architecture → implementation → deployment",
+        "Built and integrated REST APIs for business automation and system interoperability",
+        "Owned client communication, scope, and delivery with high autonomy",
+      ],
+      "pt-BR": [
+        "Entreguei soluções ponta a ponta: requisitos → arquitetura → implementação → deploy",
+        "Criei e integrei APIs REST para automação e interoperabilidade de sistemas",
+        "Assumi comunicação com cliente, escopo e entregas com alta autonomia",
+      ],
+    },
     responsibilities: {
       en: [
         "Delivered custom backend and full-stack solutions tailored to client requirements",
@@ -124,6 +169,18 @@ export const experiences = [
     period: {
       en: "Jan 2024 - Jul 2025 · San Francisco, CA, USA",
       "pt-BR": "Jan 2024 - Jul 2025 · San Francisco, CA, EUA",
+    },
+    highlights: {
+      en: [
+        "Built and maintained ecommerce/AEM experiences with SEO-aware publishing workflows",
+        "Delivered frontend from prototypes with strong UI consistency and performance mindset",
+        "Developed REST APIs and integrations using NestJS/PHP with MySQL/MariaDB",
+      ],
+      "pt-BR": [
+        "Construí e mantive experiências ecommerce/AEM com workflow de publicação alinhado a SEO",
+        "Entreguei front-end a partir de protótipos com consistência visual e mentalidade de performance",
+        "Desenvolvi APIs REST e integrações com NestJS/PHP e MySQL/MariaDB",
+      ],
     },
     responsibilities: {
       en: [
@@ -185,6 +242,18 @@ export const experiences = [
       en: "Sep 2023 - Jan 2024 · San Francisco, CA, USA",
       "pt-BR": "Set 2023 - Jan 2024 · San Francisco, CA, EUA",
     },
+    highlights: {
+      en: [
+        "Built secure, modular NestJS APIs with strong focus on maintainability and scalability",
+        "Delivered integrations and data workflows across internal and third-party services",
+        "Improved API quality through performance optimization and backend hardening practices",
+      ],
+      "pt-BR": [
+        "Construí APIs NestJS seguras e modulares com foco em manutenibilidade e escala",
+        "Entreguei integrações e fluxos de dados entre serviços internos e terceiros",
+        "Melhorei qualidade das APIs com otimização de performance e hardening no backend",
+      ],
+    },
     responsibilities: {
       en: [
         "Built robust, scalable, and secure RESTful APIs using NestJS with modular architecture",
@@ -238,6 +307,18 @@ export const experiences = [
       en: "Sep 2022 - Jan 2023 · Full-time",
       "pt-BR": "Set 2022 - Jan 2023 · Tempo integral",
     },
+    highlights: {
+      en: [
+        "Developed airline data APIs with authentication, versioning and reliable data pipelines",
+        "Built crawlers/bots for real-time extraction and automation of complex workflows",
+        "Optimized performance to reduce response times in critical user journeys",
+      ],
+      "pt-BR": [
+        "Desenvolvi APIs de dados aéreos com autenticação, versionamento e pipelines confiáveis",
+        "Criei crawlers/bots com extração em tempo real e automação de fluxos complexos",
+        "Otimizei performance para reduzir tempo de resposta em jornadas críticas",
+      ],
+    },
     responsibilities: {
       en: [
         "Implemented scalable REST APIs to integrate airline ticket data with strong authentication, versioning, and security practices",
@@ -284,6 +365,18 @@ export const experiences = [
     period: {
       en: "May 2021 - Aug 2022 · Remote",
       "pt-BR": "Mai 2021 - Ago 2022 · Remoto",
+    },
+    highlights: {
+      en: [
+        "Shipped scalable REST APIs across Node/Express and Elixir with solid database practices",
+        "Worked with PostgreSQL/MongoDB focusing on integrity, query performance and maintainability",
+        "Standardized deployments using Docker and improved team workflows with CI practices",
+      ],
+      "pt-BR": [
+        "Entreguei APIs REST escaláveis usando Node/Express e Elixir com boas práticas de banco",
+        "Trabalhei com PostgreSQL/MongoDB focando em integridade, performance de queries e manutenção",
+        "Padronizei deploys com Docker e melhorei o fluxo do time com práticas de CI",
+      ],
     },
     responsibilities: {
       en: [
@@ -333,32 +426,34 @@ export const experiences = [
   },
 ];
 
-const sectionCopy = {
+const sectionCopy: Record<
+  Lang,
+  { title: string; subtitle: string; hoverHint: string }
+> = {
   en: {
     title: "Experience",
     subtitle:
-      "Senior engineering roles at leading tech companies. Click on any company to learn more.",
+      "Senior engineering roles and high-impact deliveries. Click on any company to view details.",
     hoverHint: "Click to view details",
   },
   "pt-BR": {
     title: "Experiência",
     subtitle:
-      "Atuação sênior em engenharia em empresas de tecnologia. Clique em uma empresa para ver detalhes.",
+      "Atuação sênior e entregas de alto impacto. Clique em uma empresa para ver detalhes.",
     hoverHint: "Clique para ver detalhes",
   },
-} as const;
+};
 
 export function Experience() {
-  const lang = useLang();
+  const lang = useLang() as Lang;
   const t = sectionCopy[lang];
 
-  const [selectedExperience, setSelectedExperience] = useState<
-    (typeof experiences)[0] | null
-  >(null);
+  const [selectedExperience, setSelectedExperience] =
+    useState<ExperienceItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const handleClick = (experience: (typeof experiences)[0]) => {
+  const handleClick = (experience: ExperienceItem) => {
     setSelectedExperience(experience);
     setIsModalOpen(true);
   };
@@ -388,7 +483,7 @@ export function Experience() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {experiences.map((exp, index) => (
                 <motion.div
-                  key={index}
+                  key={`${exp.company}-${index}`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -405,7 +500,7 @@ export function Experience() {
                     <div className="relative w-32 h-32 flex items-center justify-center">
                       <motion.img
                         src={exp.logo}
-                        alt=""
+                        alt={`${exp.company} logo`}
                         className="w-full h-full object-contain transition-all duration-300"
                         style={{
                           filter:

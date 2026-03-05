@@ -15,7 +15,7 @@ const copy = {
       email: "Email",
       linkedin: "LinkedIn",
       github: "GitHub",
-      resume: "Resume",
+      resume: "Resume ENG",
     },
   },
   "pt-BR": {
@@ -26,7 +26,7 @@ const copy = {
       email: "Email",
       linkedin: "LinkedIn",
       github: "GitHub",
-      resume: "Curriculo",
+      resume: "Curriculo ENG",
     },
   },
 } as const;

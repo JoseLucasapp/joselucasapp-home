@@ -3,79 +3,98 @@
 import { motion } from "framer-motion";
 import { useLang } from "../hooks/useLang";
 
-type Lang = "pt-BR" | "en";
+type Lang4 = "pt-BR" | "en";
 
 type SkillCategory = {
   key: string;
-  category: Record<Lang, string>;
-  skills: string[];
+  category: Record<Lang4, string>;
+  core: string[];
+  secondary: string[];
 };
 
-const copy = {
-  en: { title: "Skills & Stack" },
-  "pt-BR": { title: "Habilidades & Stack" },
+const copy2 = {
+  en: { title: "Skills & Stack", core: "Core", secondary: "Also worked with" },
+  "pt-BR": {
+    title: "Habilidades & Stack",
+    core: "Core",
+    secondary: "Também uso",
+  },
 } as const;
 
 const skillCategories: SkillCategory[] = [
   {
-    key: "languages",
-    category: { en: "Languages", "pt-BR": "Linguagens" },
-    skills: ["TypeScript", "JavaScript", "Python", "Go", "Java", "Elixir", "C"],
+    key: "core-stack",
+    category: { en: "Core Stack", "pt-BR": "Stack Principal" },
+    core: [
+      "Go",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "React",
+      "Next.js",
+      "PostgreSQL",
+      "Docker",
+    ],
+    secondary: ["MongoDB", "Redis", "AWS", "REST APIs", "CI/CD"],
   },
   {
     key: "backend",
     category: { en: "Backend", "pt-BR": "Backend" },
-    skills: [
-      "Node.js",
-      "Express",
-      "NestJS",
-      "Django",
-      "Flask",
-      "Gin",
-      "Phoenix",
-      "Supabase",
-    ],
+    core: ["Go (Gin)", "Node.js", "NestJS", "PostgreSQL", "Redis"],
+    secondary: ["Express", "Supabase", "MongoDB", "Django", "Flask", "Phoenix"],
   },
   {
     key: "frontend",
     category: { en: "Frontend", "pt-BR": "Frontend" },
-    skills: ["React", "Next.js", "Vue", "Tailwind CSS"],
+    core: ["React", "Next.js", "Tailwind CSS"],
+    secondary: ["Vue", "Vite", "CSS/LESS", "KnockoutJS"],
   },
   {
-    key: "databases",
-    category: { en: "Databases", "pt-BR": "Bancos de Dados" },
-    skills: ["PostgreSQL", "MongoDB", "Redis", "ClickHouse", "DynamoDB"],
+    key: "payments",
+    category: { en: "Payments & Identity", "pt-BR": "Pagamentos & Identidade" },
+    core: ["Stripe", "Auth0"],
+    secondary: ["Clerk", "NMI", "Affirm", "EasyPayDirect"],
   },
   {
-    key: "devops",
-    category: { en: "DevOps & Cloud", "pt-BR": "DevOps & Cloud" },
-    skills: ["AWS", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
-  },
-  {
-    key: "tools",
-    category: { en: "Tools & Practices", "pt-BR": "Ferramentas & Práticas" },
-    skills: [
-      "Git",
-      "REST APIs",
-      "GraphQL",
+    key: "engineering",
+    category: {
+      en: "Engineering Practices",
+      "pt-BR": "Práticas de Engenharia",
+    },
+    core: ["Clean Architecture", "API Design", "Observability", "Performance"],
+    secondary: [
       "Microservices",
-      "CI/CD",
-      "AI",
-      "Clerk",
-      "Auth0",
-      "Wordpress",
+      "UML",
+      "Swagger/OpenAPI",
+      "Security Hardening",
     ],
   },
   {
-    key: "AI",
-    category: { en: "AI Tools", "pt-BR": "Ferramentas de IA" },
-    skills: ["ChatGPT", "Lovable", "HeroUI", "Claude", "Cursor"],
+    key: "ai",
+    category: { en: "AI & Automation", "pt-BR": "IA & Automação" },
+    core: ["LLM Integrations", "Automation Tooling"],
+    secondary: ["ChatGPT", "Claude", "Cursor", "Lovable"],
   },
 ];
 
+function SkillPills({ items }: { items: string[] }) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {items.map((skill) => (
+        <span
+          key={skill}
+          className="px-3 py-1.5 bg-card border border-border rounded-md text-foreground/80 ui-text"
+        >
+          {skill}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export function Skills() {
   const lang = useLang();
-  const t = copy[lang];
+  const t = copy2[lang];
 
   return (
     <section id="skills" className="py-24 px-6 bg-muted/30">
@@ -97,18 +116,19 @@ export function Skills() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="space-y-4"
               >
-                <h3 className="text-foreground mb-4">{cat.category[lang]}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {cat.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1.5 bg-card border border-border rounded-md text-foreground/80 ui-text"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                <h3 className="text-foreground">{cat.category[lang]}</h3>
+
+                <div className="space-y-2">
+                  <p className="text-muted-foreground ui-text">{t.core}</p>
+                  <SkillPills items={cat.core} />
+                </div>
+
+                <div className="space-y-2">
+                  <p className="text-muted-foreground ui-text">{t.secondary}</p>
+                  <SkillPills items={cat.secondary} />
                 </div>
               </motion.div>
             ))}

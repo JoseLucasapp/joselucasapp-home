@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { useLang } from "../hooks/useLang";
 
@@ -9,162 +10,55 @@ type Lang = "pt-BR" | "en";
 type Project = {
   company: string;
   project: Record<Lang, string>;
+  impact: Record<Lang, string>;
   stack: Record<Lang, string>;
   logo: string;
+  href?: string;
 };
 
 const copy = {
   en: {
     title: "Projects",
     subtitle:
-      "Selected projects delivered for global brands, startups and high-growth platforms.",
+      "Selected case-study level work across SaaS platforms, payments and AI automation.",
+    open: "Open",
   },
   "pt-BR": {
     title: "Projetos",
     subtitle:
-      "Projetos selecionados entregues para marcas globais, startups e plataformas de alto crescimento.",
+      "Projetos selecionados com nível de case study em SaaS, pagamentos e automação com IA.",
+    open: "Abrir",
   },
 } as const;
 
 const projects: Project[] = [
-  {
-    company: "Sim Mobi",
-    project: {
-      en: "Mobility App Backend",
-      "pt-BR": "Backend para App de Mobilidade",
-    },
-    stack: {
-      en: "TypeScript · APIs · PostgreSQL · MongoDB",
-      "pt-BR": "TypeScript · APIs · PostgreSQL · MongoDB",
-    },
-    logo: "/codigo.jpeg",
-  },
-  {
-    company: "e-Arbo",
-    project: {
-      en: "Forestry Management Platform",
-      "pt-BR": "Plataforma de Gestão Florestal",
-    },
-    stack: {
-      en: "TypeScript · Express · PostgreSQL · Docker",
-      "pt-BR": "TypeScript · Express · PostgreSQL · Docker",
-    },
-    logo: "https://e-arbo-front.vercel.app/static/media/logoLogin.5872b18691753b2f32e7.png",
-  },
-
-  {
-    company: "123milhas",
-    project: {
-      en: "Airline Data APIs & Crawlers",
-      "pt-BR": "APIs & Crawlers de Dados Aéreos",
-    },
-    stack: {
-      en: "Node.js · REST APIs · Crawlers · MySQL",
-      "pt-BR": "Node.js · REST APIs · Crawlers · MySQL",
-    },
-    logo: "https://123milhas.com/_next/image?url=%2Flogo%2Flogo-123-horizontal.png&w=1920&q=75",
-  },
-  {
-    company: "Nestlé Até Você",
-    project: {
-      en: "Fullstack Development",
-      "pt-BR": "Desenvolvimento Fullstack",
-    },
-    stack: {
-      en: "JavaScript · ReactJS",
-      "pt-BR": "JavaScript · ReactJS",
-    },
-    logo: "https://www.nestleatevoce.com.br/new_logo_bees-rNo.png",
-  },
-  {
-    company: "Lumisfera",
-    project: {
-      en: "Front-end Interfaces",
-      "pt-BR": "Interfaces Front-end",
-    },
-    stack: {
-      en: "React · JavaScript · CSS/LESS",
-      "pt-BR": "React · JavaScript · CSS/LESS",
-    },
-    logo: "https://lumisfera.com.br/static/version1767867858/frontend/FTD/lumi/pt_BR/images/logo.svg",
-  },
-  {
-    company: "Inspiralli",
-    project: {
-      en: "Web Experience Platform",
-      "pt-BR": "Plataforma de Experiência Web",
-    },
-    stack: {
-      en: "Front-end · UI · SEO Alignment",
-      "pt-BR": "Front-end · UI · Alinhamento SEO",
-    },
-    logo: "https://jornaldobras.com.br/images/noticias/6943/23024351_logo_inspi.png.png",
-  },
-  {
-    company: "Baby & Me",
-    project: {
-      en: "E-commerce UI",
-      "pt-BR": "UI de E-commerce",
-    },
-    stack: {
-      en: "Front-end · PHP · UI Implementation",
-      "pt-BR": "Front-end · PHP · Implementação de UI",
-    },
-    logo: "https://www.lojafamilynes.com.br/static/version1765974717/frontend/Webjump/theme-frontend-familynes/default/images/logo.png",
-  },
-  {
-    company: "CCR / Motiva",
-    project: {
-      en: "AEM Digital Content",
-      "pt-BR": "Conteúdo Digital no AEM",
-    },
-    stack: {
-      en: "AEM · JavaScript · Automation",
-      "pt-BR": "AEM · JavaScript · Automação",
-    },
-    logo: "https://media-genial-analisa.genialinvestimentos.com.br/wp-content/uploads/2021/12/01132437/motiva-logo-png-1.png",
-  },
   {
     company: "Row Seed",
     project: {
       en: "B2B Seed Marketplace",
       "pt-BR": "Marketplace B2B de Sementes",
     },
+    impact: {
+      en: "Built RFQ → quotes → checkout workflow with Stripe, enabling fast purchasing and predictable order flow.",
+      "pt-BR":
+        "Construí o fluxo RFQ → propostas → checkout com Stripe, acelerando a compra e padronizando o fluxo de pedidos.",
+    },
     stack: {
       en: "NestJS · Next.js · Stripe · PostgreSQL",
       "pt-BR": "NestJS · Next.js · Stripe · PostgreSQL",
     },
-    logo: "bolt.jpeg",
-  },
-  {
-    company: "Modern Mindset",
-    project: {
-      en: "LMS & SSO Integrations",
-      "pt-BR": "Integrações de LMS & SSO",
-    },
-    stack: {
-      en: "Next.js · WordPress · Auth0 · Teachfloor",
-      "pt-BR": "Next.js · WordPress · Auth0 · Teachfloor",
-    },
-    logo: "/modern.jpeg",
-  },
-  {
-    company: "FUSE Health",
-    project: {
-      en: "Healthcare Platform",
-      "pt-BR": "Plataforma de Saúde",
-    },
-    stack: {
-      en: "Next.js · Node.js · AWS · SOC2/HIPAA",
-      "pt-BR": "Next.js · Node.js · AWS · SOC2/HIPAA",
-    },
-    logo: "/fuse.jpeg",
+    logo: "/bolt.jpeg",
   },
   {
     company: "Recruit GenAI",
     project: {
       en: "AI Hiring Platform",
       "pt-BR": "Plataforma de Recrutamento com IA",
+    },
+    impact: {
+      en: "Implemented AI scoring and automation pipelines to speed up candidate evaluation and reduce manual review.",
+      "pt-BR":
+        "Implementei scoring com IA e automações para acelerar a avaliação de candidatos e reduzir revisão manual.",
     },
     stack: {
       en: "TypeScript · APIs · LLM · Automation",
@@ -178,6 +72,11 @@ const projects: Project[] = [
       en: "High-Performance Payments",
       "pt-BR": "Pagamentos de Alta Performance",
     },
+    impact: {
+      en: "Designed payment flows optimized for reliability and speed, focusing on edge-friendly delivery and clean UX.",
+      "pt-BR":
+        "Desenhei fluxos de pagamento otimizados para confiabilidade e velocidade, com entrega edge-friendly e UX limpa.",
+    },
     stack: {
       en: "Next.js · Edge · Payments",
       "pt-BR": "Next.js · Edge · Pagamentos",
@@ -185,23 +84,58 @@ const projects: Project[] = [
     logo: "/bolt.jpeg",
   },
   {
-    company: "Clipping Kings",
+    company: "Modern Mindset",
     project: {
-      en: "Content distribution platform",
-      "pt-BR": "Plataforma de distribuição de conteúdo",
+      en: "LMS & SSO Integrations",
+      "pt-BR": "Integrações de LMS & SSO",
+    },
+    impact: {
+      en: "Delivered Auth0 SSO and LMS integrations, aligning identity + learning flows for a smoother user experience.",
+      "pt-BR":
+        "Entreguei integrações de SSO com Auth0 e LMS, alinhando identidade e aprendizagem para uma experiência mais fluida.",
     },
     stack: {
-      en: "Vite.js · Supabase · Lovable",
-      "pt-BR": "Vite.js · Supabase · Lovable",
+      en: "Next.js · WordPress · Auth0 · Teachfloor",
+      "pt-BR": "Next.js · WordPress · Auth0 · Teachfloor",
     },
-    logo: "bolt.jpeg",
+    logo: "/modern.jpeg",
+  },
+  {
+    company: "123milhas",
+    project: {
+      en: "Airline Data APIs & Crawlers",
+      "pt-BR": "APIs & Crawlers de Dados Aéreos",
+    },
+    impact: {
+      en: "Built data extraction + API pipelines for airline ticket workflows with focus on reliability and real-time updates.",
+      "pt-BR":
+        "Construí extração de dados + pipelines de APIs para fluxos de passagens aéreas com foco em confiabilidade e tempo real.",
+    },
+    stack: {
+      en: "Node.js · REST APIs · Crawlers · MySQL",
+      "pt-BR": "Node.js · REST APIs · Crawlers · MySQL",
+    },
+    logo: "https://www.infomoney.com.br/wp-content/uploads/2023/08/269782737_1550808495278798_425803861984385634_n.png?fit=1024%2C1024&quality=50&strip=all",
+  },
+  {
+    company: "FUSE Health",
+    project: { en: "Healthcare Platform", "pt-BR": "Plataforma de Saúde" },
+    impact: {
+      en: "Worked on a healthcare platform with emphasis on secure delivery, cloud infrastructure and compliance mindset.",
+      "pt-BR":
+        "Atuei em uma plataforma de saúde com foco em entrega segura, infraestrutura cloud e mentalidade de compliance.",
+    },
+    stack: {
+      en: "Next.js · Node.js · AWS · Compliance",
+      "pt-BR": "Next.js · Node.js · AWS · Compliance",
+    },
+    logo: "/fuse.jpeg",
   },
 ];
 
 export function Projects() {
   const lang = useLang();
   const t = copy[lang];
-
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -218,55 +152,76 @@ export function Projects() {
           </h2>
           <p className="mb-16 text-muted-foreground max-w-2xl">{t.subtitle}</p>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
-            {projects.map((p, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: index * 0.03 }}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                className="group cursor-pointer"
-              >
-                <motion.div
-                  className="flex flex-col items-center justify-center gap-4 p-6 rounded-xl transition-all duration-300 hover:bg-muted/40"
-                  whileHover={{ y: -4 }}
-                >
-                  <div className="relative w-24 h-24 flex items-center justify-center">
-                    <motion.img
-                      src={p.logo}
-                      alt={`${p.company} logo`}
-                      className="w-full h-full object-contain transition-all duration-300"
-                      style={{
-                        filter:
-                          hoveredIndex === index
-                            ? "grayscale(0%)"
-                            : "grayscale(100%)",
-                        opacity: hoveredIndex === index ? 1 : 0.6,
-                      }}
-                    />
-                  </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+            {projects.map((p, index) => {
+              const isHovered = hoveredIndex === index;
+              const Wrapper = p.href ? "a" : "div";
 
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{
-                      opacity: hoveredIndex === index ? 1 : 0,
-                      height: hoveredIndex === index ? "auto" : 0,
-                    }}
-                    transition={{ duration: 0.25 }}
-                    className="text-center overflow-hidden"
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: index * 0.03 }}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  className="group"
+                >
+                  <Wrapper
+                    {...(p.href
+                      ? { href: p.href, target: "_blank", rel: "noreferrer" }
+                      : {})}
+                    className="block"
                   >
-                    <h3 className="text-foreground mb-1">{p.company}</h3>
-                    <h4 className="text-foreground mb-1">{p.project[lang]}</h4>
-                    <p className="text-muted-foreground ui-text">
-                      {p.stack[lang]}
-                    </p>
-                  </motion.div>
+                    <motion.div
+                      className="flex flex-col items-center justify-center gap-4 p-6 rounded-xl transition-all duration-300 hover:bg-muted/40 cursor-pointer"
+                      whileHover={{ y: -4 }}
+                    >
+                      <div className="relative w-24 h-24 flex items-center justify-center">
+                        <motion.img
+                          src={p.logo}
+                          alt={`${p.company} logo`}
+                          className="w-full h-full object-contain transition-all duration-300"
+                          style={{
+                            filter: isHovered ? "grayscale(0%)" : "grayscale(100%)",
+                            opacity: isHovered ? 1 : 0.6,
+                          }}
+                        />
+                      </div>
+
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{
+                          opacity: isHovered ? 1 : 0,
+                          height: isHovered ? "auto" : 0,
+                        }}
+                        transition={{ duration: 0.25 }}
+                        className="text-center overflow-hidden"
+                      >
+                        <h3 className="text-foreground mb-1">{p.company}</h3>
+                        <h4 className="text-foreground mb-2">{p.project[lang]}</h4>
+
+                        <p className="text-muted-foreground ui-text mb-2">
+                          {p.impact[lang]}
+                        </p>
+
+                        <p className="text-muted-foreground ui-text">
+                          {p.stack[lang]}
+                        </p>
+
+                        {p.href ? (
+                          <div className="mt-3 inline-flex items-center gap-2 text-muted-foreground ui-text">
+                            <ExternalLink className="w-4 h-4" />
+                            <span>{t.open}</span>
+                          </div>
+                        ) : null}
+                      </motion.div>
+                    </motion.div>
+                  </Wrapper>
                 </motion.div>
-              </motion.div>
-            ))}
+              );
+            })}
           </div>
         </motion.div>
       </div>

@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { Section } from "./Section";
 import { Container } from "./Container";
@@ -7,23 +8,19 @@ import { useLang } from "../hooks/useLang";
 const aboutCopy = {
   en: {
     title: "About",
-    body: `I'm a Senior Full-Stack Engineer passionate about building scalable systems, clean architectures, and intuitive user
-experiences. Over the years, I've worked on projects that connect technology and business, from B2B marketplaces to
-educational platforms and enterprise integrations, always aiming to deliver solutions that are both technically solid and
-strategically impactful. I currently focus on high-performance backends using Go, Node.js/NestJS, and TypeScript, alongside
-modern front-end frameworks like React and Next.js. I also explore AI-driven development and automation to streamline
-workflows, reduce friction, and elevate engineering productivity. Beyond code, I value clarity, ownership, and
-adaptability, the traits that allow me to move fast, learn faster, and consistently drive real results.`,
+    body: `I'm a Senior Full-Stack Engineer focused on building scalable SaaS platforms, clean architectures, and reliable digital products that connect technology with real business outcomes. Over the years, I’ve worked across marketplaces, ATS and recruitment systems, educational platforms, ecommerce solutions, enterprise integrations, and custom internal tools, always balancing technical quality, maintainability, and speed of execution.
+
+My strongest background is in backend and product engineering using Go, Node.js, NestJS, TypeScript, PostgreSQL, MongoDB, Redis, Docker, and cloud-based workflows, while also delivering polished user-facing experiences with React, Next.js, Tailwind, and modern front-end patterns. I've worked with payments, authentication, automation, CMS ecosystems, and AI-powered systems, including tools and integrations involving Stripe, Auth0, Clerk, WordPress, Supabase, LLM workflows, and process automation.
+
+Beyond implementation, I care deeply about architecture, API design, developer experience, observability, performance, and shipping products end-to-end with ownership. I enjoy turning complex business rules into clear systems, improving engineering workflows with automation and AI-assisted tooling, and contributing wherever the product needs the most leverage — from backend foundations and integrations to UX refinement, technical strategy, and scalable delivery.`,
   },
   "pt-BR": {
     title: "Sobre",
-    body: `Sou Engenheiro de Software com foco em construir sistemas escaláveis, arquiteturas limpas e experiências de usuário
-intuitivas. Ao longo dos anos, atuei em projetos que conectam tecnologia e negócio, de marketplaces B2B a plataformas
-educacionais e integrações enterprise, sempre buscando entregar soluções sólidas tecnicamente e relevantes de forma
-estratégica. Hoje tenho foco em backends de alta performance usando Go, Node.js/NestJS e TypeScript, além de frameworks
-modernos no front-end como React e Next.js. Também exploro automação e desenvolvimento guiado por IA para simplificar
-fluxos, reduzir atrito e aumentar a produtividade de engenharia. Além do código, valorizo clareza, ownership e
-adaptabilidade, características que me permitem entregar rápido, aprender mais rápido e gerar resultados consistentes.`,
+    body: `Sou Engenheiro Full-Stack Sênior com foco em construir plataformas SaaS escaláveis, arquiteturas limpas e produtos digitais confiáveis que conectam tecnologia a resultados reais de negócio. Ao longo dos anos, atuei em marketplaces, sistemas de ATS e recrutamento, plataformas educacionais, soluções de e-commerce, integrações enterprise e ferramentas internas sob medida — sempre equilibrando qualidade técnica, manutenibilidade e velocidade de execução.
+
+Minha base mais forte está em backend e product engineering usando Go, Node.js, NestJS, TypeScript, PostgreSQL, MongoDB, Redis, Docker e fluxos cloud, ao mesmo tempo em que entrego experiências bem acabadas no front-end com React, Next.js, Tailwind e padrões modernos de interface. Já trabalhei com pagamentos, autenticação, automação, ecossistemas CMS e sistemas com IA, incluindo ferramentas e integrações com Stripe, Auth0, Clerk, WordPress, Supabase, fluxos com LLMs e automação de processos.
+
+Além da implementação, me importo bastante com arquitetura, design de APIs, developer experience, observabilidade, performance e entrega ponta a ponta com ownership. Gosto de transformar regras de negócio complexas em sistemas claros, melhorar fluxos de engenharia com automação e ferramentas assistidas por IA, e contribuir onde o produto precisa de mais alavancagem — desde fundações de backend e integrações até refinamento de UX, estratégia técnica e entrega escalável.`,
   },
 } as const;
 
@@ -45,7 +42,7 @@ export function About() {
               {t.title}
             </h2>
 
-            <div className="space-y-6 text-foreground/80 leading-relaxed">
+            <div className="space-y-6 text-foreground/80 leading-relaxed whitespace-pre-line text-[1.02rem] md:text-[1.06rem]">
               <p>{t.body}</p>
             </div>
           </motion.div>

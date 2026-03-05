@@ -5,18 +5,20 @@ import { X } from "lucide-react";
 import { useEffect } from "react";
 import { useLang } from "../hooks/useLang";
 
-type Lang = "pt-BR" | "en";
-type I18n<T> = Record<Lang, T>;
+type Lang3 = "pt-BR" | "en";
+type I18n3<T> = Record<Lang3, T>;
 
 const modalCopy = {
   en: {
     role: "Role",
+    highlights: "Highlights (Outcomes)",
     responsibilities: "Key Responsibilities",
-    projects: "Main Projects Delivered",
+    projects: "Main Deliveries",
     tech: "Technologies Used",
   },
   "pt-BR": {
     role: "Cargo",
+    highlights: "Destaques (Impacto)",
     responsibilities: "Principais responsabilidades",
     projects: "Principais entregas",
     tech: "Tecnologias",
@@ -29,10 +31,11 @@ interface ExperienceModalProps {
   experience: {
     company: string;
     logo: string;
-    role: I18n<string>;
-    period: I18n<string>;
-    responsibilities: I18n<string[]>;
-    projects: I18n<string[]>;
+    role: I18n3<string>;
+    period: I18n3<string>;
+    highlights: I18n3<string[]>;
+    responsibilities: I18n3<string[]>;
+    projects: I18n3<string[]>;
     technologies: string[];
   } | null;
 }
@@ -80,7 +83,7 @@ export function ExperienceModal({
                   <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
                     <img
                       src={experience.logo}
-                      alt={` `}
+                      alt=""
                       className="w-8 h-8 object-contain"
                     />
                   </div>
@@ -107,6 +110,18 @@ export function ExperienceModal({
                   <p className="text-muted-foreground">
                     {experience.role[lang]}
                   </p>
+                </div>
+
+                <div>
+                  <h4 className="text-foreground mb-3">{t.highlights}</h4>
+                  <ul className="space-y-2">
+                    {experience.highlights[lang].map((item, index) => (
+                      <li key={index} className="flex gap-3 text-foreground/80">
+                        <span className="text-muted-foreground mt-1.5">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 <div>
