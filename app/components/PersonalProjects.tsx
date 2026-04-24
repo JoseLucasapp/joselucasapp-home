@@ -30,21 +30,6 @@ const copy = {
 
 const projects: Project[] = [
   {
-    name: "Aselora",
-    description: {
-      en: "Aselora helps local businesses launch an online storefront in minutes and start selling without complex checkout flows. Customers browse products or services and contact the store directly through WhatsApp, removing friction and making digital presence simple and accessible. This first version focuses on speed and simplicity, with many new features coming next.",
-      "pt-BR":
-        "O Aselora ajuda negócios locais a criarem uma vitrine online em minutos e começarem a vender sem checkout complexo. O cliente visualiza produtos ou serviços e entra em contato direto pelo WhatsApp, removendo fricção e facilitando a presença digital. A V1 é focada em simplicidade e velocidade, e muitas melhorias ainda estão por vir.",
-    },
-    stack: {
-      en: "Next.js · Saas · Payments · Supabase",
-      "pt-BR": "Next.js · Saas · Pagamentos · Supabase",
-    },
-    mediaType: "video",
-    media: "/aselora.mp4",
-    link: "https://aselora.site",
-  },
-  {
     name: "Zumbra",
     description: {
       en: "Zumbra is a gentle programming language designed to make code more readable and welcoming (even for those who don't code). Born from the desire to bridge the gap between logic and language, Zumbra embraces simplicity, structure, and expression. Its clean syntax and human-friendly features aim to help learners, educators, and curious minds understand what code is really saying.",
