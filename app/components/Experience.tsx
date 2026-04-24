@@ -28,6 +28,54 @@ export type ExperienceItem = {
 
 export const experiences: ExperienceItem[] = [
   {
+    company: "LeadTrux",
+    logo: "/leadtrux.jpeg",
+    role: {
+      en: "Front-end Engineer",
+      "pt-BR": "Engenheiro de Front-end",
+    },
+    period: {
+      en: "Apr 2026 - Present · Remote (Tashkent, Uzbekistan)",
+      "pt-BR": "Abr 2026 - Atual · Remoto (Tashkent, Uzbekistan)",
+    },
+    highlights: {
+      en: [
+        "Building and maintaining modern web applications with React, TypeScript, and Tailwind CSS.",
+        "Collaborating with the team to implement UI/UX designs, deliver new features, improve code quality, and create scalable, maintainable frontend solutions.",
+      ],
+      "pt-BR": [
+        "Construindo e mantendo aplicações web modernas com React, TypeScript e Tailwind CSS.",
+        "Colaborando com a equipe para implementar designs de UI/UX, entregar novas funcionalidades, melhorar a qualidade do código e criar soluções frontend escaláveis e manuteníveis.",
+      ],
+    },
+    responsibilities: {
+      en: [
+        "Building and maintaining modern web applications with React, TypeScript, and Tailwind CSS.",
+        "Collaborating with the team to implement UI/UX designs, deliver new features, improve code quality, and create scalable, maintainable frontend solutions.",
+      ],
+      "pt-BR": [
+        "Construindo e mantendo aplicações web modernas com React, TypeScript e Tailwind CSS.",
+        "Colaborando com a equipe para implementar designs de UI/UX, entregar novas funcionalidades, melhorar a qualidade do código e criar soluções frontend escaláveis e manuteníveis.",
+      ],
+    },
+    projects: {
+      en: [
+        "Delivered frontend from prototypes with strong UI consistency and performance mindset",
+        "Performance and reliability improvements (instrumentation, optimization, and maintainability)",
+      ],
+      "pt-BR": [
+        "Entrega de frontend a partir de protótipos com forte consistência de UI e mindset de performance",
+        "Melhorias de performance e confiabilidade (instrumentação, otimização e manutenibilidade)",
+      ],
+    },
+    technologies: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Vite",
+    ],
+  },
+  {
     company: "Bolt Group",
     logo: "/bolt.jpeg",
     role: {

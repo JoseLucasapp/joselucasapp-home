@@ -33,6 +33,23 @@ const copy = {
 
 const projects: Project[] = [
   {
+    company: "LeadTrux",
+    project: {
+      en: "Software for truck companies",
+      "pt-BR": "Software para empresas de transporte",
+    },
+    impact: {
+      en: "Frontend development of a logistics SaaS platform, delivering key features and improving UI consistency across the product.",
+      "pt-BR":
+        "Desenvolvimento frontend de uma plataforma SaaS de logística, entregando funcionalidades chave e melhorando a consistência de UI em todo o produto.",
+    },
+    stack: {
+      en: "React · Next.js · Vue · Vite",
+      "pt-BR": "React · Next.js · Vue · Vite",
+    },
+    logo: "/leadtrux.jpeg",
+  },
+  {
     company: "Row Seed",
     project: {
       en: "B2B Seed Marketplace",
