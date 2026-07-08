@@ -7,7 +7,7 @@ import { useLang } from "../hooks/useLang";
 const heroCopy = {
   en: {
     tagline:
-      "Senior Full-Stack Engineer specializing in SaaS platforms, payments, and AI automation. Shipping reliable systems end-to-end (architecture → delivery) for US teams.",
+      "Senior Full-Stack Engineer specializing in SaaS platforms, payments, and AI automation. Shipping reliable systems end-to-end (architecture → delivery) for teams around the world.",
     cta1: "Work with me",
     cta2: "View experience",
   },

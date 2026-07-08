@@ -33,6 +33,23 @@ const copy = {
 
 const projects: Project[] = [
   {
+    company: "ReimagineCRE",
+    project: {
+      en: "Tenant-only commercial real estate advisory firm",
+      "pt-BR": "Empresa de consultoria imobiliária comercial para inquilinos",
+    },
+    impact: {
+      en: "Built the CRE platform from the ground up, focusing on scalability and user experience.",
+      "pt-BR":
+        "Construí a plataforma CRE do zero, com foco em escalabilidade e experiência do usuário.",
+    },
+    stack: {
+      en: "Supabase · ReactJS · TypeScript · Software Architecture",
+      "pt-BR": "Supabase · ReactJS · TypeScript · Arquitetura de Software",
+    },
+    logo: "/reimaginecre.jpeg",
+  },
+  {
     company: "LeadTrux",
     project: {
       en: "Software for truck companies",
